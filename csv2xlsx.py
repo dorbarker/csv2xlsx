@@ -7,8 +7,8 @@ from xlsxwriter.workbook import Workbook
 def arguments():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path', default = ".", help = "Path to CSV files")
-    parser.add_argument('--outname', default = None) 
+    parser.add_argument('--path', default = os.getcwd(), help = "Path to CSV files")
+    parser.add_argument('--outname', default = None, help = "Name of output XLSX file") 
     return parser.parse_args()
 
 def wrap_csvs(csvpath, outname):

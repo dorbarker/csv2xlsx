@@ -34,7 +34,7 @@ def wrap_csvs(csvpath, outname):
             for rindex, row in enumerate(reader):
                 for cindex, col in enumerate(row):
                     try:
-                        worksheet.write(rindex,cindex, int(col))
+                        worksheet.write(rindex,cindex, float(col))
                     except ValueError:
                         worksheet.write(rindex, cindex, col)
 
